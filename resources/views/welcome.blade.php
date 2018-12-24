@@ -10,7 +10,7 @@
         <div class="links">
 
             @foreach($tasks as $task)
-                <a href="#">{{ $task; }}</a>
+                <a href="#">{{ $task }}</a>
             @endforeach
         
         </div>
