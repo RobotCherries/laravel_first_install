@@ -11,25 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    $tasks = [
-        'Go to the store',
-        'Go to the market',
-        'Go to work',
-        'Go to the concert'
-    ];
-
-    return view('welcome', [
-        'tasks' => $tasks
-    ]);
-});
-
-Route::get('/about', function () {
-    
-    return view('about');
-});
-
-Route::get('/contact', function () {
-    
-    return view('contact');
-});
+Route::get('/', 'PagesController@home');
+Route::get('/intructiuni', 'PagesController@instructions');
+Route::get('/pontare', 'PagesController@clocking');
+Route::get('/panou-administrare', 'PagesController@admin_panel');
+Route::get('/setari', 'PagesController@settings');
